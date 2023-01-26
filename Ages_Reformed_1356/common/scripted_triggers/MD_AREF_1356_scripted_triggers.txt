@@ -1,0 +1,244 @@
+# -----------------------------------------------------
+# Scripted Triggers for use with Ages Reformed.
+# -----------------------------------------------------
+
+st_md_placated_estates = {
+    estate_loyalty = {
+        estate = estate_burghers
+        loyalty = 60
+    }
+    estate_loyalty = {
+        estate = estate_church
+        loyalty = 60
+    }
+    estate_loyalty = {
+        estate = estate_nobles
+        loyalty = 60
+    }	
+    num_of_estate_privileges = {
+        estate = estate_burghers
+        value = 3
+    }
+    num_of_estate_privileges = {
+        estate = estate_church
+        value = 3
+    }
+    num_of_estate_privileges = {
+        estate = estate_nobles
+        value = 3
+    }	
+}
+
+st_md_placated_estates_england = {
+    legitimacy = 85
+    estate_loyalty = {
+        estate = estate_burghers
+        loyalty = 60
+    }
+    estate_loyalty = {
+        estate = estate_church
+        loyalty = 60
+    }	
+    num_of_estate_privileges = {
+        estate = estate_burghers
+        value = 3
+    }
+    num_of_estate_privileges = {
+        estate = estate_church
+        value = 3
+    }
+}
+
+st_md_king_takes_command = {
+    OR = {
+        is_monarch_leader = yes
+        is_heir_leader = yes
+    }
+}
+
+st_md_built_castles = {
+    calc_true_if = {
+        amount = 3
+        all_owned_province = {
+            has_building = fort_15th
+        }
+    }
+}
+
+st_md_has_small_start = {
+    capital_scope = {
+        OR = {
+            region = japan_region
+            region = maghreb_region
+            superregion = africa_superregion
+            superregion = southern_africa_superregion
+            superregion = east_indies_superregion
+            continent = oceania
+            continent = north_america
+            continent = south_america
+        }
+        NOT = { region = indo_china_region }
+    }
+}
+
+st_md_has_medium_start = {
+    capital_scope = {
+        OR = {
+            region = indo_china_region
+            continent = europe
+            superregion = india_superregion
+            superregion = near_east_superregion
+            superregion = persia_superregion
+            superregion = tartary_superregion
+        }
+    }
+}
+
+st_md_has_large_start = {
+    capital_scope = {
+        OR = {
+            superregion = far_east_superregion
+            superregion = china_superregion
+        }
+        NOT = { region = japan_region }
+    }
+}
+
+st_md_control_holy_site_europe = {
+    OR = {
+        owns_core_province = 379 #Jerusalem
+        owns_core_province = 151 #Constantanopole
+        owns_core_province = 118 #Rome
+        owns_core_province = 219 #Toledo
+        owns_core_province = 464 #Astrakhan
+        owns_core_province = 1 #Stockholm
+        owns_core_province = 17 #Akershus
+        owns_core_province = 12 #Sjaelland
+        owns_core_province = 370 #Reykjavik
+        owns_core_province = 980 #Beothuk #Included for BT
+        owns_core_province = 272 #Vilna
+        owns_core_province = 271 #Samogitia
+        owns_core_province = 35 #Osel
+        owns_core_province = 41 #Konigsberg
+        owns_core_province = 257 #Warszawa
+        owns_core_province = 27 #Abo
+        owns_core_province = 33 #Neva
+        owns_core_province = 304 #Penza
+        owns_core_province = 18 #Lappland
+        owns_core_province = 1082 #Kazan
+        owns_core_province = 295 #Moskva
+        owns_core_province = 293 #Smolensk
+        owns_core_province = 280 #Kiev
+        owns_core_province = 310 #Novgorod
+        owns_core_province = 257 #Warszawa
+        owns_core_province = 145 #Morea
+        owns_core_province = 318 #Sugla
+        owns_core_province = 146 #Athens
+    }
+}
+
+st_md_control_holy_site_africa = {
+    OR = {
+        owns_core_province = 358 #Alexandria
+        owns_core_province = 4316 #Sharqiya
+        owns_core_province = 2771 #Semien
+        owns_core_province = 2256 #Dagbon
+        owns_core_province = 1224 #Gonder
+        owns_core_province = 1792 #Merina
+        owns_core_province = 1184 #Zimbabwe
+        owns_core_province = 1170 #Mpemba
+    }
+}
+
+st_md_control_holy_site_middle_east = {
+    OR = {
+        owns_core_province = 379 #Jerusalem
+        owns_core_province = 2313 #Antioch
+        owns_core_province = 151 #Constantanopole
+        owns_core_province = 358 #Alexandria
+        owns_core_province = 385 #Mecca
+        owns_core_province = 384 #Medina
+        owns_core_province = 410 #Baghdad
+        owns_core_province = 382 #Damascus
+        owns_core_province = 433 #Yazd
+        owns_core_province = 426 #Amol
+        owns_core_province = 429 #Isfahan
+        owns_core_province = 445 #Merv
+        owns_core_province = 4316 #Sharqiya
+        owns_core_province = 2219 #Bandar Langeh
+    }
+}
+
+st_md_control_holy_site_east_asia = {
+    OR = {
+        owns_core_province = 1816 #Beijing
+        owns_core_province = 1821 #Nanjing
+        owns_core_province = 667 #Canton
+        owns_core_province = 700 #Xi'an
+        owns_core_province = 682 #Wuchang
+        owns_core_province = 2174 #Hengyang
+        owns_core_province = 1020 #Kyoto
+        owns_core_province = 1832 #Yamato
+        owns_core_province = 1029 #Kai
+        owns_core_province = 1012 #Satsuma
+        owns_core_province = 1015 #Okinawa
+        owns_core_province = 730 #Girin
+        owns_core_province = 677 #Lhasa
+        owns_core_province = 2133 #Dege
+    }
+}
+
+st_md_control_holy_site_south_asia = {
+    OR = {
+        owns_core_province = 522 #Delhi
+        owns_core_province = 506 #Multan
+        owns_core_province = 1948 #Bidar
+        owns_core_province = 550 #Mahakoshal
+        owns_core_province = 556 #Lower Doab
+        owns_core_province = 677 #Lhasa
+        owns_core_province = 2133 #Dege
+        owns_core_province = 601 #Sukhothai
+        owns_core_province = 584 #Ava
+        owns_core_province = 2371 #Song La
+    }
+}
+
+st_md_control_holy_site_tartary = {
+    OR = {
+        owns_core_province = 2190 #Qaraqorum
+        owns_core_province = 730 #Girin
+        owns_core_province = 2358 #Altyn
+        owns_core_province = 466 #Sari
+        owns_core_province = 715 #Urumqi
+        owns_core_province = 426 #Amol
+        owns_core_province = 445 #Merv
+        owns_core_province = 464 #Astrakhan
+        owns_core_province = 506 #Multan
+        owns_core_province = 677 #Lhasa
+        owns_core_province = 2133 #Dege
+    }
+}
+
+st_md_control_holy_site_americas = {
+    OR = {
+        owns_core_province = 852 #Mexico
+        owns_core_province = 850 #Tlaxcala
+        owns_core_province = 4591 #Chikinchel
+        owns_core_province = 2644 #Cholula
+        owns_core_province = 844 #Zapotec
+        owns_core_province = 808 #Cuzco
+        owns_core_province = 812 #Chanchan
+        owns_core_province = 794 #Jujuy
+        owns_core_province = 835 #Panama
+        owns_core_province = 775 #Asuncion
+        owns_core_province = 905 #Iowa
+        owns_core_province = 960 #Onondaga
+        owns_core_province = 987 #Niagra
+        owns_core_province = 925 #Tuskegee
+        owns_core_province = 878 #Navajo
+        owns_core_province = 2934 #Manaus
+        owns_core_province = 775 #Asuncion
+        owns_core_province = 828 #Cartagema
+        owns_core_province = 489 #Tortuga
+    }
+}

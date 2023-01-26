@@ -1,0 +1,6 @@
+﻿l_french:
+
+ loc_md_industrialization_bonus_info: "----- §YObjective Fulfillment§! -----\nGlobal Metropolis: §G+0.50 Yearly Prestige§!\nWorld Trade: §G+1 Diplomatic Reputation§!\nInd. Revolution: §G+10% Production and Trade Power§!\nInd. Titans: §G+10% Production and Trade Power§!\nImperial Army: §G-2 Global Unrest§!\nRailroad Network: §G+10% Land Movement Speed§!\nScramble for Africa: §G+1% Missionary Strength§!\nThe Sun Never Sets: §G-25% Leader Cost§!\n\nNote: Some objectives are unavailable for your nation."
+
+ loc_md_industrial_age: "§YAge of Industrialization§!\nWith factories and other powerful means of production popping up the great powers are dividing the less developed parts of the world between each other to secure access to the resources required to fuel the industrial revolution.\n----------\n(Enables the Absolutism mechanics.)\nThis age starts when the §YIndustrialization§! institution has been established for §Y120§! months."
+ 

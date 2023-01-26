@@ -1,0 +1,18 @@
+tm_md_prestigious_capital = {
+	potential = {
+		OR = {
+			current_age = third_age
+			current_age = fourth_age
+		}
+	}
+	trigger = {
+		capital_scope = {
+			development = 30
+			religion = ROOT
+			culture = ROOT
+			NOT = { devastation = 0.01 }
+		}
+	}
+	global_tax_modifier = 0.1
+	global_trade_power = 0.1
+}

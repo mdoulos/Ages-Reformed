@@ -1,0 +1,109 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_icon_age_small"
+		texturefile = "gfx/interface/ages/icon_age_s.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_icon_age_complete"
+		texturefile = "gfx/interface/ages/icon_age_g.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_icon_age_large"
+		texturefile = "gfx/interface/ages/icon_age_l.dds"
+		noOfFrames = 5
+	}
+
+	# Objectives
+	spriteType = {
+		name = "GFX_obj_md_powerful_estates"
+		texturefile = "gfx/interface/ages/obj_md_estates.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_powerful_estates_england"
+		texturefile = "gfx/interface/ages/obj_md_estates.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_trade_league"
+		texturefile = "gfx/interface/ages/obj_md_shaking_hands.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_king_takes_direct_command_europe"
+		texturefile = "gfx/interface/ages/obj_md_feudal_king_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_king_takes_direct_command_african"
+		texturefile = "gfx/interface/ages/obj_md_feudal_king_african.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_king_takes_direct_command_asian"
+		texturefile = "gfx/interface/ages/obj_md_feudal_king_asian.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_king_takes_direct_command_indian"
+		texturefile = "gfx/interface/ages/obj_md_feudal_king_indian.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_king_takes_direct_command_muslim"
+		texturefile = "gfx/interface/ages/obj_md_feudal_king_muslim.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_king_takes_direct_command_native"
+		texturefile = "gfx/interface/ages/obj_md_feudal_king_native.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_large_realm_smallstart"
+		texturefile = "gfx/interface/ages/obj_md_crown_on_pillow.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_large_realm_mediumstart"
+		texturefile = "gfx/interface/ages/obj_md_crown_on_pillow.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_large_realm_largestart"
+		texturefile = "gfx/interface/ages/obj_md_crown_on_pillow.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_feudal_society"
+		texturefile = "gfx/interface/ages/obj_md_vassal_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_build_castles"
+		texturefile = "gfx/interface/ages/obj_md_14th_century_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_control_holy_site_europe"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_control_holy_site_africa"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_control_holy_site_middle_east"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_control_holy_site_east_asia"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_control_holy_site_south_asia"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_control_holy_site_tartary"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_control_holy_site_americas"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	
+
+
+}

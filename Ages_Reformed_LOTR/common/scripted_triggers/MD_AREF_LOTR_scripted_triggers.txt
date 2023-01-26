@@ -1,0 +1,28 @@
+# -----------------------------------------------------
+# Scripted Triggers for use with Ages Reformed.
+# -----------------------------------------------------
+
+st_md_is_trade_giant = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = gold
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = silver
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = ivory
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = dyes
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = gems
+        }
+    }
+}

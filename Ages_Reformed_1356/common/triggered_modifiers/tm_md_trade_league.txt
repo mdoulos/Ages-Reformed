@@ -1,0 +1,13 @@
+tm_md_trade_league = {
+	potential = {
+		current_age = age_of_feudalism
+	}
+	trigger = {
+		OR = {
+			is_in_trade_league = yes
+			mercantilism = 20
+		}
+	}
+	global_trade_power = 0.05
+	trade_efficiency = 0.05
+}

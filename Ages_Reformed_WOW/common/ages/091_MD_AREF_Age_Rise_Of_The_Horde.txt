@@ -1,0 +1,264 @@
+# Covers the Rise of the Horde
+age_rise_of_the_horde = {
+	start = 546
+	
+	can_start = {
+		always = yes
+	}
+	
+    papacy = 1.0
+	religious_conflicts = yes
+    absolutism = { 
+        harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -3
+		war_exhaustion = -1
+    }
+    
+	objectives = {
+		roth_obj_prestigious_capital = {
+            capital_scope = {
+                development = 30
+                religion = ROOT
+                culture = ROOT
+                NOT = { devastation = 1 }
+            }
+        }
+		roth_obj_absolute_rule = {
+            absolutism = 50
+        }
+        obj_md_competent_court_europe = {
+			st_md_competent_court = yes
+		}
+        obj_md_colossal_army = {
+            land_forcelimit = 50
+            army_size_percentage = 0.8
+        }
+        obj_md_colossal_fleet = {
+            naval_forcelimit = 50
+            navy_size_percentage = 0.8
+        }
+		obj_md_great_general_europe = {
+			has_commanding_three_star = yes
+		}
+	}		
+
+	abilities = {
+		ab_md_1400s_allow_feudal_de_jure_law = {
+			effect = {
+				custom_tooltip = feudal_de_jure_law
+				set_country_flag = feudal_de_jure_law
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_fuedal_de_jure_law abilityName = ab_md_1400s_allow_feudal_de_jure_law }
+			}
+		}
+		ab_md_1400s_justified_wars = {
+			modifier = {
+				ae_impact = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = reduce_aggressive_expansion flagCategory = reduce_aggressive_expansion }
+			}
+		}
+		ab_md_1400s_transfer_vassal_wargoal = {
+			modifier = {
+				can_transfer_vassal_wargoal = yes
+				can_chain_claim = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = transfer_vassal flagCategory = peace_treaty_options }
+			}
+		}
+		ab_md_1400s_free_war_taxes = {
+			modifier = {
+				war_taxes_cost_modifier = -1.0
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = free_war_taxes flagCategory = reduce_war_taxes }
+			}
+		}
+		ab_md_1400s_cavalry_armies = {
+			modifier = {
+				cav_to_inf_ratio = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = cav_to_inf_ratio flagCategory = increase_cavalry }
+			}
+		}
+		ab_md_1400s_attack_bonus_in_capital_terrain = {
+			modifier = {
+				attack_bonus_in_capital_terrain = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = attack_bonus_in_capital_terrain flagCategory = attack_bonus_in_capital_terrain }
+			}
+		}
+		ab_md_1400s_hardened_soldiers = {
+			modifier = {
+				land_attrition = -0.25
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = endurance flagName = reduced_attrition abilityName = ab_md_1400s_hardened_soldiers showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1400s_insecure_castles = {
+			modifier = {
+				artillery_levels_available_vs_fort = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = siege flagName = artillery_levels_1 abilityName = ab_md_1400s_insecure_castles showTooltip = true }
+			}
+		}
+		ab_md_1400s_loyal_vassals = {
+			modifier = {
+				reduced_liberty_desire = 20
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 20
+						}
+					}
+				}
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = loyal_vassals flagCategory = loyal_vassals }
+			}
+		}
+		ab_md_1400s_mercenary_discipline = {
+			modifier = {
+				mercenary_discipline = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = mercenary flagName = mercenary_discipline abilityName = ab_md_1400s_mercenary_discipline showTooltip = true }
+			}
+		}
+		ab_md_1400s_cheap_counsel = {
+			modifier = {
+				advisor_cost = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = advisor_cost flagCategory = advisor_cost }
+			}
+		}
+		ab_md_1400s_changing_world = {
+			modifier = {
+				culture_conversion_cost = -0.25
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = culturalchange flagName = culture_conversion abilityName = ab_md_1400s_changing_world showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1400s_spy_networks = {
+			modifier = {
+				spy_offence = 0.2
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = espionage flagName = spy_offence abilityName = ab_md_1400s_spy_networks showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1400s_slave_soldiers = {
+			modifier = {
+				manpower_recovery_speed = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = manpower_recovery_speed flagCategory = improved_manpower }
+			}
+		}
+		ab_md_1400s_tyrant_acceptance = {
+			modifier = {
+				min_autonomy_in_territories = -0.10
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = docile flagName = min_autonomy_in_territories abilityName = ab_md_1400s_tyrant_acceptance showTooltip = true }
+			}
+		}
+		ab_md_1400s_competent_diplomats = {
+			modifier = {
+				improve_relation_modifier = 0.25
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = diplomacy flagName = improve_relations abilityName = ab_md_1400s_competent_diplomats showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1400s_balanced_books = {
+			modifier = {
+				interest = -0.5
+				yearly_corruption = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = interest_and_corruption flagCategory = interest_and_corruption }
+			}
+		}
+		ab_md_1400s_savvy_merchants = {
+			modifier = {
+				global_trade_power = 0.1
+				trade_efficiency = 0.1
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = trade flagName = trade_efficiency abilityName = ab_md_1400s_savvy_merchants showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

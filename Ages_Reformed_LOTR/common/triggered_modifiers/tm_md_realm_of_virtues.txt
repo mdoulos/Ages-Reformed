@@ -1,0 +1,20 @@
+tm_md_realm_of_virtues = {
+	potential = {
+		OR = {
+			current_age = third_age
+			current_age = fourth_age
+		}
+	}
+	trigger = {
+		prestige = 95
+		NOT = { corruption = 0 }
+		OR = {
+			legitimacy = 95
+			horde_unity = 95
+			devotion = 95
+			republican_tradition = 95
+			meritocracy = 95
+		}
+	}
+	country_admin_power = 1
+}

@@ -1,0 +1,7 @@
+tm_md_world_metropolis = {
+	potential = { current_age = age_of_imperialism }
+	trigger = {
+		st_md_capital_is_metropolis = yes
+	}
+	prestige = 0.5
+}

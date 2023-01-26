@@ -1,0 +1,13 @@
+tm_md_colossal_fleet = {
+	potential = {
+		OR = {
+			current_age = third_age
+			current_age = fourth_age
+		}
+	}
+	trigger = {
+		naval_forcelimit = 100
+		navy_size_percentage = 0.9
+	}
+	country_diplomatic_power = 1
+}

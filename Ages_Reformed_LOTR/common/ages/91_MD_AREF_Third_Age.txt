@@ -1,0 +1,292 @@
+third_age = {
+	start = 2560
+	
+	can_start = {
+		always = yes
+	}
+	
+	religious_conflicts = yes
+	papacy = 1.0
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -3
+		war_exhaustion = -1
+	}
+
+	objectives = {
+		obj_md_prestigious_capital = {
+            capital_scope = {
+                development = 30
+                religion = ROOT
+                culture = ROOT
+                NOT = { devastation = 0.01 }
+            }
+        }
+		obj_md_wise_ruler = {
+            OR = {
+                adm = 6
+                dip = 6
+                mil = 6
+            }
+        }
+        obj_md_racial_unity = {
+            religious_unity = 1.0
+        }
+        obj_md_colossal_fleet = {
+            naval_forcelimit = 100
+            navy_size_percentage = 0.9
+        }
+        obj_md_colossal_army = {
+            land_forcelimit = 100
+            army_size_percentage = 0.9
+        }
+        obj_md_realm_of_virtues = {
+            prestige = 95
+            NOT = { corruption = 0 }
+            OR = {
+                legitimacy = 95
+                horde_unity = 95
+                devotion = 95
+                republican_tradition = 95
+                meritocracy = 95
+            }
+        }
+        obj_md_well_connected = {
+            num_of_allies = 5
+        }
+		obj_md_trade_giant = {
+            st_md_is_trade_giant = yes
+        }
+	}		
+
+	abilities = {
+        ab_md_1400s_justified_wars = {
+			modifier = {
+				ae_impact = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = reduce_aggressive_expansion flagCategory = reduce_aggressive_expansion }
+			}
+		}
+        ab_md_1400s_hardened_soldiers = {
+			modifier = {
+				land_attrition = -0.25
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = endurance flagName = reduced_attrition abilityName = ab_md_1400s_hardened_soldiers showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1400s_cheap_counsel = {
+			modifier = {
+				advisor_cost = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = advisor_cost flagCategory = advisor_cost }
+			}
+		}
+        ab_md_1700s_additional_diplomat = {
+			modifier = {
+				diplomats = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = diplomacy flagName = diplomat abilityName = ab_md_1700s_additional_diplomat showTooltip = true }
+			}
+		}
+        ab_md_1600s_urgent_construction = {
+			modifier = {
+				build_time = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = build_time flagCategory = build_time }
+			}
+		}
+        ab_md_1400s_loyal_vassals = {
+			modifier = {
+				reduced_liberty_desire = 20
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 20
+						}
+					}
+				}
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = loyal_vassals flagCategory = loyal_vassals }
+			}
+		}
+		ab_md_1700s_quick_landings = {
+			modifier = {
+				movement_speed_onto_off_boat_modifier = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = movement_speed_onto_off_boat_modifier flagCategory = amphibious_assault }
+			}
+		}
+		ab_md_1400s_mercenary_discipline = {
+			modifier = {
+				mercenary_discipline = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = mercenary flagName = mercenary_discipline abilityName = ab_md_1400s_mercenary_discipline showTooltip = true }
+			}
+		}
+		ab_md_1500s_ship_power_propagation = {
+			modifier = {
+				ship_power_propagation = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = navy flagName = ship_power_propagation abilityName = ab_md_1500s_ship_power_propagation showTooltip = true }
+			}
+		}
+		ab_md_1500s_additional_missionary = {
+			modifier = {
+				missionaries = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = additional_missionary flagCategory = additional_missionary }
+			}
+		}
+		ab_md_1600s_financial_opportunities = {
+			modifier = {
+				merchants = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = trade flagName = merchant abilityName = ab_md_1600s_financial_opportunities showTooltip = true }
+			}
+		}
+		ab_md_1400s_spy_networks = {
+			modifier = {
+				spy_offence = 0.2
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = espionage flagName = spy_offence abilityName = ab_md_1400s_spy_networks showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1500s_accepting_new_ideas = {
+			modifier = {
+				idea_cost = -0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = science flagName = idea_cost abilityName = ab_md_1500s_accepting_new_ideas showTooltip = true }
+			}
+		}
+		ab_md_1700s_large_empire = {
+			modifier = {
+				governing_capacity = 200
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = governing_capacity flagCategory = governing_capacity }
+			}
+		}
+		ab_md_1600s_admin_efficiency = {
+			modifier = {
+				administrative_efficiency = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = administrative_efficiency flagCategory = administrative_efficiency }
+			}
+		}
+		ab_md_1400s_balanced_books = {
+			modifier = {
+				interest = -0.5
+				yearly_corruption = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = interest_and_corruption flagCategory = interest_and_corruption }
+			}
+		}
+		ab_md_1600s_faster_trade_connections = {
+			modifier = {
+				trade_efficiency = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = navy flagName = trade_efficiency abilityName = ab_md_1600s_faster_trade_connections showTooltip = true }
+			}
+		}
+		ab_md_1700s_no_distance_for_core = {
+			modifier = {
+				ignore_coring_distance = yes
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = has_had_conquest flagCategory = ignore_coring_distance }
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					# AI peace code relies on being limited by coring range, or it will create crazy border gore where it can't reach its new lands
+					factor = 0
+					OR = {
+						is_subject = no
+						overlord = {
+							ai = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}

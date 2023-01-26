@@ -1,0 +1,9 @@
+tm_md_build_castles = {
+	potential = {
+		current_age = age_of_feudalism
+	}
+	trigger = {
+		st_md_built_castles = yes
+	}
+	army_tradition = 0.25
+}

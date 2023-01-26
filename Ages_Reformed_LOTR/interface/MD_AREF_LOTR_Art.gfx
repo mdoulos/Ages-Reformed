@@ -1,0 +1,36 @@
+spriteTypes = {
+
+	# Objectives
+	spriteType = {
+		name = "GFX_obj_md_prestigious_capital"
+		texturefile = "gfx/interface/ages/obj_md_medieval_pilgrimage.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_wise_ruler"
+		texturefile = "gfx/interface/ages/obj_md_competent_court_generic.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_racial_unity"
+		texturefile = "gfx/interface/ages/obj_md_religious_unity.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_colossal_army"
+		texturefile = "gfx/interface/ages/obj_md_large_forcelimit.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_colossal_fleet"
+		texturefile = "gfx/interface/ages/obj_md_build_fleet_fantasy.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_realm_of_virtues"
+		texturefile = "gfx/interface/ages/obj_md_audit_government.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_well_connected"
+		texturefile = "gfx/interface/ages/obj_md_shaking_hands.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_md_trade_giant"
+		texturefile = "gfx/interface/ages/obj_md_control_multiple_markets.dds"
+	}
+}

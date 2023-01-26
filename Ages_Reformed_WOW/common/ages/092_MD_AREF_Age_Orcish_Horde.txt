@@ -1,0 +1,342 @@
+# Covers the First and Second War
+age_orcish_horde = {
+	start = 592
+	
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = age_orcish_horde_condition
+            OR = {
+                AND = {
+                    current_age = age_rise_of_the_horde
+                    
+                    # Dark Portal Azeroth
+                    1035 = {
+                        owner = {
+                            OR = {
+                                tag = U03
+                                has_country_flag = orcish_horde_primary_nation
+                            }
+                        }
+                    }
+                }
+                
+                # Fallback
+                is_year = 617
+            }
+		}
+	}
+	
+    papacy = 1.0
+	religious_conflicts = yes
+    absolutism = { 
+        harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -3
+		war_exhaustion = -1
+    }
+    
+	objectives = {
+		toh_obj_prestigious_capital = {
+            capital_scope = {
+                development = 30
+                religion = ROOT
+                culture = ROOT
+                NOT = { devastation = 1 }
+            }
+        }
+		toh_obj_absolute_rule = {
+            absolutism = 80
+        }
+        toh_obj_kalimdor_settlements = {
+		    OR = {
+                # Kalimdor Capital -> Non-Kalimdor province
+				AND = {
+					capital_scope = {
+						superregion = kalimdor_superregion 
+					}
+					any_owned_province = {
+                        NOT = {
+                            superregion = kalimdor_superregion
+                        }
+					}
+				}
+                # Non-Kalimdor Capital -> Kalimdor province
+				AND = {
+					capital_scope = {
+						NOT = {
+                            superregion = kalimdor_superregion
+                        }
+					}
+					any_owned_province = {
+						superregion = kalimdor_superregion
+					}
+				}
+		    }
+        }
+        toh_obj_masterful_counsel = {
+			OR = {
+				philosopher = 3
+				natural_scientist = 3
+				artist = 3
+				treasurer = 3
+				theologian = 3
+				master_of_mint = 3
+				inquisitor = 3
+                administrator = 3
+                supervisor = 3
+                reformer = 3
+			}
+			OR = {
+				statesman = 3
+				naval_reformer = 3
+				trader = 3
+				spymaster = 3
+				colonial_governor = 3
+				diplomat = 3
+				navigator = 3
+                shipwright = 3
+                ambassador = 3
+                negotiator = 3
+			}
+			OR = {
+				army_reformer = 3
+				army_organiser = 3
+				commandant = 3
+				quartermaster = 3
+				recruitmaster = 3
+				fortification_expert = 3
+				grand_captain = 3
+                sapper = 3
+                scout = 3
+                orator = 3
+			}
+        }
+        toh_obj_colossal_army = {
+            land_forcelimit = 60
+            army_size_percentage = 0.8
+        }
+        toh_obj_colossal_navy = {
+            naval_forcelimit = 60
+            navy_size_percentage = 0.8
+        }
+        toh_obj_inspirational_leader = {
+            has_commanding_three_star = yes
+        }
+	}		
+
+	abilities = {
+        ab_md_1500s_allow_religion_enforced = {
+			effect = {
+				custom_tooltip = religion_enforced_edict
+				set_country_flag = religion_enforced_edict
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_religion_enforced abilityName = ab_md_1500s_allow_religion_enforced }
+			}
+		}
+		ab_md_1500s_warscore_vs_religion = {
+			modifier = {
+				warscore_cost_vs_other_religion = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = religion_warscore flagCategory = religion_war }
+			}
+		}
+		ab_md_1500s_mercenary_discipline = {
+			modifier = {
+				mercenary_discipline = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = mercenary flagName = mercenary_discipline abilityName = ab_md_1500s_mercenary_discipline showTooltip = true }
+			}
+		}
+		ab_md_1500s_ship_power_propagation = {
+			modifier = {
+				ship_power_propagation = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = navy flagName = ship_power_propagation abilityName = ab_md_1500s_ship_power_propagation showTooltip = true }
+			}
+		}
+		ab_md_1500s_institution_spread_from_true_faith = {
+			modifier = {
+				institution_spread_from_true_faith = 0.5
+				global_institution_spread = 0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = institution_spread_religion flagCategory = institution_spread }
+			}
+		}
+		ab_md_1500s_prestige_per_development_from_conversion = {
+			modifier = {
+				prestige_per_development_from_conversion = 0.3
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = prestige_conversion flagCategory = prestige_conversion }
+			}
+		}
+		ab_md_1500s_additional_missionary = {
+			modifier = {
+				missionaries = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = additional_missionary flagCategory = additional_missionary }
+			}
+		}
+		ab_md_1500s_attentive_listening = {
+			modifier = {
+				global_missionary_strength = 0.03
+			}
+			ai_will_do = {
+				factor = 100
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = religion flagName = missionary_strength abilityName = ab_md_1500s_attentive_listening showTooltip = true }
+			}
+		}
+		ab_md_1500s_hardened_soldiers = {
+			modifier = {
+				land_attrition = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = endurance flagName = reduced_attrition abilityName = ab_md_1500s_hardened_soldiers showTooltip = true }
+			}
+		}
+		ab_md_1500s_persecution_migration = {
+			modifier = {
+				culture_conversion_cost = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = culturalchange flagName = culture_conversion abilityName = ab_md_1500s_persecution_migration showTooltip = true }
+			}
+		}
+		ab_md_1500s_accepting_new_ideas = {
+			modifier = {
+				idea_cost = -0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = science flagName = idea_cost abilityName = ab_md_1500s_accepting_new_ideas showTooltip = true }
+			}
+		}
+		ab_md_1500s_secret_religion = {
+			modifier = {
+				spy_offence = 0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = espionage flagName = spy_offence abilityName = ab_md_1500s_secret_religion showTooltip = true }
+			}
+		}
+		ab_md_1500s_holy_kingdom = {
+			modifier = {
+				yearly_corruption = -0.25
+				global_spy_defence = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = corruption_spydefence flagCategory = corruption_spydefence }
+			}
+		}
+		ab_md_1500s_god_over_country = {
+			modifier = {
+				relation_with_same_religion = 25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = diplomacy flagName = relation_with_same_religion abilityName = ab_md_1500s_god_over_country showTooltip = true }
+			}
+		}
+		ab_md_1500s_converted_merchants = {
+			modifier = {
+				merchants = 1
+				trade_efficiency = 0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = trade flagName = trade_efficiency_and_merchant abilityName = ab_md_1500s_converted_merchants showTooltip = true }
+			}
+		}
+		ab_md_1500s_like_minded_immigration = {
+			modifier = {
+				development_cost = -0.1
+				build_cost = -0.1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = economy flagName = like_minded_immigration abilityName = ab_md_1500s_like_minded_immigration showTooltip = true }
+			}
+		}
+		ab_md_1500s_colony_boost_development = {
+			modifier = {
+				can_colony_boost_development = yes
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = colony_boost_development flagCategory = colony_boost_development }
+			}
+		}
+		ab_md_1500s_early_colonial_interest = {
+			modifier = {
+				global_colonial_growth = 20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = colonization flagName = colonial_growth abilityName = ab_md_1500s_early_colonial_interest showTooltip = true }
+			}
+		}
+	}
+}

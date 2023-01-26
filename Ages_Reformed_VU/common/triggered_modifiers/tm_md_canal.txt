@@ -1,0 +1,18 @@
+tm_md_canal = {
+	potential = { current_age = age_of_change }
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 1
+			OR = {
+				has_great_project = { type = kiel_canal }
+				has_great_project = { type = suez_canal }
+				has_great_project = { type = second_suez_canal }
+				has_great_project = { type = panama_canal }
+				has_great_project = { type = ludwig_canal }
+				has_great_project = { type = don_and_volga_canal }
+			}
+		}
+	}
+	production_efficiency = 0.1
+	global_trade_power = 0.1
+}

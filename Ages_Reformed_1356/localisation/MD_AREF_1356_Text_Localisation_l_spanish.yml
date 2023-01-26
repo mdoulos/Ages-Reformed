@@ -1,0 +1,72 @@
+﻿l_spanish:
+
+ # Age of Feudalism Objectives
+ obj_md_king_takes_direct_command_europe: "A King to Follow"
+ obj_md_king_takes_direct_command_african: "A King to Follow"
+ obj_md_king_takes_direct_command_asian: "A King to Follow"
+ obj_md_king_takes_direct_command_indian: "A King to Follow"
+ obj_md_king_takes_direct_command_muslim: "A King to Follow"
+ obj_md_king_takes_direct_command_native: "A King to Follow"
+
+ obj_md_king_takes_direct_command_europe_desc: "Have your Ruler or Heir be a General and fight a war against another country."
+ obj_md_king_takes_direct_command_african_desc: "Have your Ruler or Heir be a General and fight a war against another country."
+ obj_md_king_takes_direct_command_asian_desc: "Have your Ruler or Heir be a General and fight a war against another country."
+ obj_md_king_takes_direct_command_indian_desc: "Have your Ruler or Heir be a General and fight a war against another country."
+ obj_md_king_takes_direct_command_muslim_desc: "Have your Ruler or Heir be a General and fight a war against another country."
+ obj_md_king_takes_direct_command_native_desc: "Have your Ruler or Heir be a General and fight a war against another country."
+ 
+ obj_md_powerful_estates: "Placate the Estates"
+ obj_md_powerful_estates_england: "Placate the Estates"
+ obj_md_powerful_estates_desc: "Grant three privileges to the nobility, clergy, and burgher estates in your country and maintain their loyalty above 60%."
+ obj_md_powerful_estates_england_desc: "Grant three privileges to the clergy, and burgher estates in your country and maintain their loyalty above 60%. Maintain 85 Legitimacy."
+
+ obj_md_trade_league: "Mercantile Principles"
+ obj_md_trade_league_desc: "Have 20 Mercantilism or be a member or leader of a Trade League."
+
+ obj_md_large_realm_smallstart: "Have a Large Realm"
+ obj_md_large_realm_mediumstart: "Have a Large Realm"
+ obj_md_large_realm_largestart: "Have a Large Realm"
+ obj_md_large_realm_smallstart_desc: "Control a significant amount of development compared to your neighbors."
+ obj_md_large_realm_mediumstart_desc: "Control a significant amount of development compared to your neighbors."
+ obj_md_large_realm_largestart_desc: "Control a significant amount of development compared to your neighbors."
+
+ obj_md_feudal_society: "Be a Feudal Lord"
+ obj_md_feudal_society_desc: "Have at least four different vassals or subjects at the same time."
+
+ obj_md_build_castles: "Build Castles"
+ obj_md_build_castles_desc: "Own or control at least three castles."
+
+ obj_md_control_holy_site_europe: "Control a Holy Site"
+ obj_md_control_holy_site_africa: "Control a Holy Site"
+ obj_md_control_holy_site_middle_east: "Control a Holy Site"
+ obj_md_control_holy_site_east_asia: "Control a Holy Site"
+ obj_md_control_holy_site_south_asia: "Control a Holy Site"
+ obj_md_control_holy_site_tartary: "Control a Holy Site"
+ obj_md_control_holy_site_americas: "Control a Holy Site"
+
+ obj_md_control_holy_site_europe_desc: "Control a holy site, holy city, or significant religious location."
+ obj_md_control_holy_site_africa_desc: "Control a holy site, holy city, or significant religious location."
+ obj_md_control_holy_site_middle_east_desc: "Control a holy site, holy city, or significant religious location."
+ obj_md_control_holy_site_east_asia_desc: "Control a holy site, holy city, or significant religious location."
+ obj_md_control_holy_site_south_asia_desc: "Control a holy site, holy city, or significant religious location."
+ obj_md_control_holy_site_tartary_desc: "Control a holy site, holy city, or significant religious location."
+ obj_md_control_holy_site_americas_desc: "Control a holy site, holy city, or significant religious location."
+
+ # Age of Feudalism Objectives Fulfilled
+ tm_md_king_to_follow: "A King to Follow"
+ tm_md_placate_the_estates: "Placate the Estates"
+ tm_md_build_castles: "Build Castles"
+ tm_md_large_realm: "Have a Large Realm"
+ tm_md_feudal_society: "Be a Feudal Lord"
+ tm_md_trade_league: "Mercantile Principles"
+ tm_md_control_holy_site: "Control a Holy Site"
+ tm_md_cavalry_army: "Cavalry Armies"
+
+
+ loc_md_feudalism_bonus_info: "----- §YObjective Fulfillment§! -----\nKing to Follow: §G+0.50 Prestige and Legitimacy§!\nPlacate Estates: §G-2 Global Unrest§!\nBuild Castles: §G+0.25 Yearly Army Tradition§!\nLarge Realm: §G+10% Manpower§!\nFeudal Lord: §G+1 Free Leader§!\nTrade League: §G+5% Trade Power and Efficiency§!\nControl Holy Site: §G+1 Diplomatic Reputation§!\nCavalry Armies: §G-10% Cavalry Costs§!\n\nNote: Some objectives are unavailable for your nation."
+
+ loc_md_age_of_feudalism: "§YAge of Feudalism§!\nThe world is decentralized and numerous lords and vassals fight for riches, glory, and survival. This is the era of metal fist and arrow. Kings seeking to increase their lands will multiply their friends and appease their nobles.\n----------\n(Enables the Religious Conflicts.)\nThis is the starting age."
+ 
+
+ # Age Painting Descriptions
+ pic_age_of_feudalism_desc: "The Archoros City, Merl1ncz, 2007\n\nPictured is an artist's interpretation of a typical European medieval city during the age of feudalism. Feudalism is hard to define, but roughly describes a widespread political system in the 9th through 16th centuries that saw decentralized societies managed through a number of minor lords, each owing allegiance and military service to the lord above them as vassals. These lords typically owned land, castles, and soldiers and were expected to come together under the king's banner in time of war. Under them, most of society lived as serfs or peasants, though many others lived as merchants and artisans in the ever-growing towns and cities.\n\nKings and emperors had much less centralized control over the land and had to rely on the fealty or allegiance of their vassals. This would change due to the introduction of gunpowder weapons, as cannons ensured that rich nobles and kings could effectively break the resistance of obstinate minor lords, thus allowing them greater ability to consolidate their personal power and would lead to the creation of centralized states."

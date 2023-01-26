@@ -1,0 +1,462 @@
+age_of_feudalism = {
+	start = 1300
+	
+	can_start = {
+		always = yes
+	}
+	
+	religious_conflicts = yes
+	papacy = 0.50
+	
+	objectives = {
+
+		# King Takes Command -------------------------------------------------------------------
+		obj_md_king_takes_direct_command_europe = {
+			allow = {
+				ai = no
+				st_md_capital_in_christian_europe = yes
+			}	
+			custom_trigger_tooltip = {
+				tooltip = fought_in_a_war_10_years
+				had_recent_war = 10		
+			}	
+			st_md_king_takes_command = yes
+		}
+		obj_md_king_takes_direct_command_african = {
+			allow = {
+				ai = no
+				st_md_capital_in_africa_not_muslim = yes
+				st_md_capital_in_levant_persia_or_northafrica = no
+			}	
+			custom_trigger_tooltip = {
+				tooltip = fought_in_a_war_10_years
+				had_recent_war = 10		
+			}	
+			st_md_king_takes_command = yes
+		}
+		obj_md_king_takes_direct_command_muslim = {
+			allow = {
+				ai = no
+				OR = {
+					st_md_capital_in_levant_persia_or_northafrica = yes
+					religion_group = muslim
+				}
+			}	
+			custom_trigger_tooltip = {
+				tooltip = fought_in_a_war_10_years
+				had_recent_war = 10		
+			}	
+			st_md_king_takes_command = yes
+		}
+		obj_md_king_takes_direct_command_native = {
+			allow = {
+				ai = no
+				NOT = { religion_group = muslim }
+				OR = {
+					st_md_capital_in_tartary = yes
+					st_md_capital_in_americas = yes
+					st_md_capital_in_uncivilized_eastindies_or_oceania = yes
+				}
+			}	
+			custom_trigger_tooltip = {
+				tooltip = fought_in_a_war_10_years
+				had_recent_war = 10		
+			}	
+			st_md_king_takes_command = yes
+		}
+		obj_md_king_takes_direct_command_indian = {
+			allow = {
+				ai = no
+				NOT = { religion_group = muslim }
+				st_md_capital_in_india = yes
+			}	
+			custom_trigger_tooltip = {
+				tooltip = fought_in_a_war_10_years
+				had_recent_war = 10		
+			}	
+			st_md_king_takes_command = yes
+		}
+		obj_md_king_takes_direct_command_asian = {
+			allow = {
+				ai = no
+				NOT = { religion_group = muslim }
+				OR = {
+					st_md_capital_in_eastasia = yes
+					st_md_capital_in_civilized_eastindies = yes
+				}
+			}	
+			custom_trigger_tooltip = {
+				tooltip = fought_in_a_war_10_years
+				had_recent_war = 10		
+			}	
+			st_md_king_takes_command = yes
+		}
+
+		# End King Takes Command -------------------------------------------------------------------
+
+		obj_md_powerful_estates = { 
+			# Audax Validator "." Ignore_ALL
+			allow = {
+				NOT = { has_reform = english_monarchy }
+				ai = no
+			}			
+			st_md_placated_estates = yes		
+		}		
+		obj_md_powerful_estates_england = { # If player has English Government
+			# Audax Validator "." Ignore_ALL
+			allow = {
+				has_reform = english_monarchy
+				ai = no
+			}
+			st_md_placated_estates_england = yes
+		}
+
+		obj_md_build_castles = {
+			allow = { ai = no }
+			st_md_built_castles = yes
+		}
+
+		# Have a Large Realm -------------------------------------------------------------------
+
+		obj_md_large_realm_smallstart = { 
+			allow = { 
+				ai = no
+				st_md_has_small_start = yes
+			}
+			total_development = 75
+	 	}
+
+		obj_md_large_realm_mediumstart = { 
+			allow = { 
+				ai = no 
+				st_md_has_medium_start = yes
+			}
+			total_development = 150
+	 	}	
+
+		obj_md_large_realm_largestart = { 
+			allow = { 
+				ai = no 
+				st_md_has_large_start = yes
+			}
+			total_development = 300
+	 	}	
+
+		# End Have a Large Realm -------------------------------------------------------------------
+
+		obj_md_feudal_society = { #Feudal Society
+			allow = { ai = no }
+			num_of_subjects = 4
+		}
+
+		obj_md_trade_league = {
+			allow = { ai = no }			
+			OR = {
+				is_in_trade_league = yes
+				mercantilism = 20
+			}
+		}
+
+		# Control Holy Site -------------------------------------------------------------------
+
+		obj_md_control_holy_site_europe = {
+			allow = {
+				ai = no
+				capital_scope = {
+					continent = europe
+				}
+			}
+			st_md_control_holy_site_europe = yes
+		}
+		obj_md_control_holy_site_africa = {
+			allow = {
+				ai = no
+				capital_scope = {
+					continent = africa
+				}
+			}
+			st_md_control_holy_site_africa = yes
+		}
+		obj_md_control_holy_site_middle_east = {
+			allow = {
+				ai = no
+				st_md_capital_in_levant_or_persia = yes
+			}
+			st_md_control_holy_site_middle_east = yes
+		}
+		obj_md_control_holy_site_east_asia = {
+			allow = {
+				ai = no
+				st_md_capital_in_eastasia = yes
+			}
+			st_md_control_holy_site_east_asia = yes
+		}
+		obj_md_control_holy_site_south_asia = {
+			allow = {
+				ai = no
+				OR = {
+					st_md_capital_in_civilized_southasia = yes
+					st_md_capital_in_uncivilized_eastindies_or_oceania = yes
+				}
+			}
+			st_md_control_holy_site_south_asia = yes
+		}
+		obj_md_control_holy_site_tartary = {
+			allow = {
+				ai = no
+				st_md_capital_in_tartary = yes
+			}
+			st_md_control_holy_site_tartary = yes
+		}
+		obj_md_control_holy_site_americas = {
+			allow = {
+				ai = no
+				st_md_capital_in_americas = yes
+			}
+			st_md_control_holy_site_americas = yes
+		}
+
+		# End Control Holy Site -------------------------------------------------------------------
+		
+		obj_cav_army = { #Suggested by Mexdus on the workshop suggestion thread
+			allow = {
+				ai = no 
+			}		
+			cavalry_fraction = 0.3 #Too high?
+			army_size_percentage = 0.8
+		}
+	}
+	
+	abilities = {
+		ab_md_1300s_allow_feudal_de_jure_law = {
+			effect = {
+				custom_tooltip = feudal_de_jure_law
+				set_country_flag = feudal_de_jure_law
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			modifier = {
+				min_autonomy_in_territories = -0.1
+				global_autonomy = -0.05
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_fuedal_de_jure_law abilityName = ab_md_1300s_allow_feudal_de_jure_law showTooltip = true }
+			}
+		}
+		ab_md_1300s_medieval_scholasticism = { # Renamed to Scholarly Studies - Geno
+			modifier = {
+				global_institution_spread = 0.20
+				embracement_cost = -0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = institution_spread_embrace_cost flagCategory = institution_spread }
+			}		
+		}
+		ab_md_1300s_medieval_architecture = {
+			modifier = {
+				build_time = -0.10
+				build_cost = -0.10 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = economy flagName = build_time_cost abilityName = ab_md_1300s_medieval_architecture showTooltip = true }
+			}
+		}
+		ab_md_1300s_feudal_contracts = {
+			rule = {
+				can_transfer_vassal_wargoal = yes
+			}		
+			modifier = {
+				vassal_forcelimit_bonus = 0.5
+				vassal_income = 0.10
+				reduced_liberty_desire = 15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = vassal_income_loyalty flagCategory = loyal_vassals }
+			}
+		}
+		ab_md_1300s_feudalism_royal_court = {                    
+			modifier = {
+				advisor_cost = -0.25
+				advisor_pool = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = diplomacy flagName = advisor_cost_diplomatic abilityName = ab_md_1300s_feudalism_royal_court showTooltip = true }
+			}
+		}
+
+		ab_md_1300s_cavalry_supremacy = {                      
+			modifier = {
+				cav_to_inf_ratio = 0.10
+				cavalry_flanking = 0.25
+			}
+			ai_will_do = {
+				factor = 15
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = cavalry_damage flagCategory = increase_cavalry }
+			}
+		}
+		ab_md_1300s_mercenary_bands = {
+			modifier = {
+				merc_maintenance_modifier = -0.15
+				mercenary_cost = -0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = mercenary flagName = mercenary_cost abilityName = ab_md_1300s_mercenary_bands showTooltip = true }
+			}
+		}
+		ab_md_1300s_chevauchee = { #Historically this is a strategy to siege a fort down without harming it ##1.31 Modified to account for Loot amount being added to base values. Now enables Loot Wars
+			# effect = { # Not yet implemented
+				# custom_tooltip = chevauchee_wars
+				# custom_tooltip = chevauchee_loot_provinces
+				# set_country_flag = allow_chevauchee_wars
+			# }		
+			modifier = {
+				available_province_loot = 0.3
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = siege flagName = province_loot abilityName = ab_md_1300s_chevauchee showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 8 # Slightly less favored to prevent nation ruining
+			}
+		}
+		ab_md_1300s_restructure_governorships = {
+			modifier = {
+				state_governing_cost = -0.15
+				expand_administration_cost = -0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = state_governing_cost flagCategory = governing_capacity }
+			}
+		}
+		ab_md_1300s_religious_devotion = {
+			modifier = {
+				global_missionary_strength = 0.03
+			}
+			ai_will_do = {
+				factor = 100
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = religion flagName = missionary_strength abilityName = ab_md_1300s_religious_devotion showTooltip = true }
+			}
+		}
+		ab_md_1300s_rich_lords = {
+			modifier = {
+				prestige = 0.5
+				legitimacy = 0.5
+				republican_tradition = 0.5
+				devotion = 0.5
+				horde_unity = 0.5
+				meritocracy = 0.5
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = prestige_legitimacy flagCategory = prestige_legitimacy }
+			}
+		}
+		ab_md_1300s_lucrative_markets = {
+			modifier = {
+				merchants = 1
+				trade_efficiency = 0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = trade flagName = trade_efficiency_and_merchant abilityName = ab_md_1300s_lucrative_markets showTooltip = true }
+			}
+		}
+		ab_md_1300s_landed_peasantry = {
+			modifier = {
+				global_manpower_modifier = 0.10
+				production_efficiency = 0.10
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = manpower_modifier flagCategory = manpower_modifier }
+			}
+		}
+		ab_md_1300s_royal_relations = {
+			modifier = {
+				diplomatic_reputation = 1
+				heir_chance = 0.5
+				monthly_heir_claim_increase = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = royal_relations flagCategory = royal_relations }
+			}
+		}
+		ab_md_1300s_cloak_and_dagger = {
+			modifier = {
+				spy_offence = 0.35
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = espionage flagName = spy_offence abilityName = ab_md_1300s_cloak_and_dagger showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1300s_skilled_scouts = {
+			modifier = {
+				movement_speed = 0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = movement_speed flagCategory = movement_speed }
+			}
+		}
+		ab_md_1300s_secure_castles = {
+			modifier = {
+				defensiveness = 0.15
+				fort_maintenance_modifier = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = fort_defense flagCategory = fort_defense }
+			}
+		}
+		ab_md_1300s_mistreating_serfs = {
+			modifier = {
+				harsh_treatment_cost = -0.65
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = harsh_treatment_cost flagCategory = harsh_treatment_cost }
+			}
+		}
+	}
+}

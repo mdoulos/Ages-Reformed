@@ -1,0 +1,16 @@
+tm_md_wise_ruler = {
+	potential = {
+		OR = {
+			current_age = third_age
+			current_age = fourth_age
+		}
+	}
+	trigger = {
+		OR = {
+			adm = 6
+			dip = 6
+			mil = 6
+		}
+	}
+	administrative_efficiency = 0.1
+}

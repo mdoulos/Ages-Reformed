@@ -1,0 +1,22 @@
+tm_md_large_realm = {
+	potential = {
+		current_age = age_of_feudalism
+	}
+	trigger = {
+		OR = {
+			AND = {
+				st_md_has_small_start = yes
+				total_development = 75
+			}
+			AND = {
+				st_md_has_medium_start = yes
+				total_development = 150
+			}
+			AND = {
+				st_md_has_large_start = yes
+				total_development = 300
+			}
+		}
+	}
+	global_manpower_modifier = 0.10
+}

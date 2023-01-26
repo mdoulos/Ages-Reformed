@@ -1,0 +1,5 @@
+﻿l_spanish:
+
+ age_of_feudalism_desc: "The world is decentralized and numerous lords and vassals fight for riches, glory, and survival. This is the era of metal fist and arrow. Kings seeking to increase their lands will multiply their friends and appease their nobles."
+
+ loc_md_age_of_discovery: "§YAge of Discovery§!\nAt the dawn of the Early Modern era new continents are being mapped while feudal society is slowly giving way to centralized states. For an enterprising state this age can see the foundation of a worldwide empire.\n----------\n(Enables the Religious Conflicts.)\nThis age will start by default in §Y1435§!. However, if Rome or Constantinople is conquered by a Non-Christian power, the §YAge of Discovery§! can instead start in §Y1425§!.""

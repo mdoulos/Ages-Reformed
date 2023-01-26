@@ -1,0 +1,17 @@
+tm_md_industry = {
+	potential = { current_age = industrial_age }
+	trigger = {
+		calc_true_if = {
+			all_owned_province = {
+				OR = {
+					has_building = furnace
+					has_building = oil_well
+				}
+				is_core = ROOT
+			}
+			amount = 5
+		}
+	}
+	production_efficiency = 0.1
+	global_trade_power = 0.1
+}

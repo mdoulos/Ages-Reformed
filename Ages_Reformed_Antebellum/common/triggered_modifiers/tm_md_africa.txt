@@ -1,0 +1,7 @@
+tm_md_africa = {
+	potential = { current_age = age_of_imperialism }
+	trigger = {
+		st_md_has_10_in_africa = yes
+	}
+	global_missionary_strength = 0.01
+}

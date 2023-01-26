@@ -1,0 +1,10 @@
+tm_md_cavalry_army = {
+	potential = {
+		current_age = age_of_feudalism
+	}
+	trigger = {
+		cavalry_fraction = 0.3 #Too high?
+		army_size_percentage = 0.8
+	}
+	cavalry_cost = -0.10
+}

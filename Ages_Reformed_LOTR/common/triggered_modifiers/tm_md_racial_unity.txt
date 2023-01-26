@@ -1,0 +1,12 @@
+tm_md_racial_unity = {
+	potential = {
+		OR = {
+			current_age = third_age
+			current_age = fourth_age
+		}
+	}
+	trigger = {
+		religious_unity = 1.0
+	}
+	global_unrest = -2
+}

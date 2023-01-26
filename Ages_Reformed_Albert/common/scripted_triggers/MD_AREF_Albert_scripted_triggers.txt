@@ -1,0 +1,18 @@
+# -----------------------------------------------------
+# Scripted Triggers for use with Ages Reformed.
+# -----------------------------------------------------
+
+
+st_md_has_20_in_africa_albert = {
+    calc_true_if = {
+        all_owned_province = {
+            OR = {
+                region = central_africa_region
+                region = kongo_region
+                region = sahel_region
+                region = niger_region
+            }
+        }
+        amount = 20
+    }
+}

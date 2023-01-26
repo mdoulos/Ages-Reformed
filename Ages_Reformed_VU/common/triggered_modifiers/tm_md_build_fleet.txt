@@ -1,0 +1,37 @@
+tm_md_build_fleet = {
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		OR = {
+			AND = {
+				st_md_build_fleet = yes
+				st_md_capital_in_tartary_vu = no
+				OR = {
+					religion_group = muslim
+					st_md_capital_in_levant_persia_or_northafrica_vu = yes
+					st_md_capital_in_horn_of_africa_vu = yes
+					st_md_capital_in_india = yes
+					st_md_capital_in_civilized_eastindies_vu = yes
+					st_md_capital_in_eastasia_vu = yes
+					st_md_capital_in_christian_europe = yes
+				}
+			}
+			AND = {
+				st_md_build_fleet_natives = yes
+				NOT = { 
+					religion_group = muslim
+					st_md_capital_in_horn_of_africa_vu = yes
+				}
+				OR = {
+					st_md_capital_in_tartary_vu = yes
+					st_md_capital_in_americas = yes
+					st_md_capital_in_australia = yes
+					st_md_capital_in_subsaharan_africa_vu = yes
+					st_md_capital_in_uncivilized_eastindies_or_oceania_not_australia_vu = yes
+				}
+			}
+		}
+	}
+	country_diplomatic_power = 1
+}

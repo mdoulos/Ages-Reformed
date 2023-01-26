@@ -1,0 +1,7 @@
+tm_md_railroad_network = {
+	potential = { current_age = industrial_age }
+	trigger = {
+		railroad = 15
+	}
+	movement_speed = 0.10
+}

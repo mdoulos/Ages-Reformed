@@ -1,0 +1,40 @@
+﻿l_english:
+
+ # Objectives
+ obj_md_prestigious_capital: "Prestigious Capital"
+ obj_md_well_connected: "Well Connected"
+ obj_md_realm_of_virtues: "Realm of Virtues"
+ obj_md_colossal_army: "Colossal Army"
+ obj_md_colossal_fleet: "Colossal Fleet"
+ obj_md_racial_unity: "Racial Unity"
+ obj_md_wise_ruler: "Wise Ruler"
+ obj_md_trade_giant: "Trade Giant"
+
+ obj_md_prestigious_capital_desc: "Have a capital with your race and culture with 30 development and zero devastation."
+ obj_md_well_connected_desc: "Have 5 Alliances at once."
+ obj_md_realm_of_virtues_desc: "Have 95 Prestige and Legitimacy (or equivalent) whilst you have zero Corruption."
+ obj_md_colossal_army_desc: "Have 100 Land Forcelimit and have 90% of your forcelimit used."
+ obj_md_colossal_fleet_desc: "Have 100 Naval Forcelimit and have 90% of your forcelimit used."
+ obj_md_racial_unity_desc: "Have 100% racial unity in your nation."
+ obj_md_wise_ruler_desc: "Have a ruler with either 6 Administrative Skill, 6 Diplomatic Skill or 6 Military Skill."
+ obj_md_trade_giant_desc: "Control a significant amount of a valuable trade good."
+
+ tm_md_prestigious_capital: "Prestigious Capital"
+ tm_md_well_connected: "Well Connected"
+ tm_md_realm_of_virtues: "Realm of Virtues"
+ tm_md_colossal_army: "Colossal Army"
+ tm_md_colossal_fleet: "Colossal Fleet"
+ tm_md_racial_unity: "Racial Unity"
+ tm_md_wise_ruler: "Wise Ruler"
+ tm_md_trade_giant: "Trade Giant"
+
+ # Ages
+ loc_md_third_age: "§YThe Third Age§!\nThe Third Age begins with the conclusion of the War of the Last Alliance against Sauron, wherein Isildur, king of Gondor, cut off the ring of Sauron and refused to destroy it, and ends when Frodo Baggins throws the ring into Mount Doom.\n----------\n(Enables the Religious Conflicts.)\nThis is the starting age."
+
+ loc_md_fourth_age: "§YThe Fourth Age§!\nFollowing the defeat of Sauron, mankind becomes the predominate ethnic force of the world. Elves journey west to the Undying Lands, Dwarves isolate themselves in the mountains, and the stories of the past become myth and legend.\n----------\n(Enables the Absolutism mechanics.)\nThis age starts in 3019."
+
+ pic_third_age_desc: "The Ring of Power lying at the bottom of the Gladden River, before it was found by Déagol in 2463. His cousin Sméagol murdered him nearly immediately and took the ring for himself, prolonging his life and turning him into the tormented creature named Gollum."
+ pic_fourth_age_desc: "An elven ship leaving Middle Earth for the Undying Lands to the west."
+
+ loc_md_third_age_bonus_info: "----- §YObjective Fulfillment§! -----\nPrestigious Capital: §G+10% Tax Income and Trade Power§!\nWise Ruler: §G+10% Administrative Efficiency§!\nRacial Unity: §G-2 Global Unrest§!\nColossal Fleet: §G+1 Monthly Diplomatic Power§!\nColossal Army: §G+1 Monthly Military Power§!\nRealm of Virtues: §G+1 Monthly Administrative Power§!\nWell Connected: §G+2 Diplomatic Reputation§!\nTrade Giant: §G+10% Production and Trade Power§!"
+ loc_md_fourth_age_bonus_info: "----- §YObjective Fulfillment§! -----\nPrestigious Capital: §G+10% Tax Income and Trade Power§!\nWise Ruler: §G+10% Administrative Efficiency§!\nRacial Unity: §G-2 Global Unrest§!\nColossal Fleet: §G+1 Monthly Diplomatic Power§!\nColossal Army: §G+1 Monthly Military Power§!\nRealm of Virtues: §G+1 Monthly Administrative Power§!\nWell Connected: §G+2 Diplomatic Reputation§!\nTrade Giant: §G+10% Production and Trade Power§!"

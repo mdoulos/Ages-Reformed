@@ -1,0 +1,7 @@
+tm_md_five_continents = {
+	potential = { current_age = industrial_age }
+	trigger = {
+		num_of_continents = 5
+	}
+	leader_cost = -0.25
+}

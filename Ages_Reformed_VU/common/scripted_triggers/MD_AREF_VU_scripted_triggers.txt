@@ -1,0 +1,638 @@
+# -----------------------------------------------------
+# Scripted Triggers for use with Ages Reformed.
+# -----------------------------------------------------
+
+st_md_capital_in_subsaharan_africa_vu = {
+    capital_scope = {
+        continent = africa
+        NOT = {
+            region = maghreb_region
+            region = libya_region
+            region = egypt_region
+        }
+    }
+}
+
+st_md_capital_in_horn_of_africa_vu = {
+    capital_scope = {
+        OR = {
+            region = sudan_region
+            region = horn_of_africa_region
+        }
+    }
+}
+
+st_md_capital_in_levant_or_persia_vu = {
+    capital_scope = {
+        OR = {
+            region = egypt_region
+            superregion = near_east_superregion
+            superregion = persia_superregion
+        }
+    }
+}
+
+st_md_capital_in_levant_persia_or_northafrica_vu = {
+    capital_scope = {
+        OR = {
+            region = maghreb_region
+            region = libya_region
+            region = egypt_region
+            superregion = near_east_superregion
+            superregion = persia_superregion
+        }
+    }
+}
+
+st_md_capital_in_africa_not_muslim_vu = {
+    capital_scope = {
+        continent = africa
+    }
+    NOT = {
+        religion_group = muslim
+    }
+}
+
+st_md_muslim_in_africa_vu = {
+    capital_scope = {
+        continent = africa
+    }
+    religion_group = muslim
+}
+
+st_md_capital_in_eastasia_vu = {
+    capital_scope = {
+        OR = {
+            superregion = far_east_superregion
+            superregion = china_superregion
+            region = manchuria_region
+        }
+    }
+}
+
+st_md_capital_in_tartary_vu = {
+    capital_scope = {
+        superregion = tartary_superregion
+        NOT = {
+            region = manchuria_region
+        }
+    }
+}
+
+st_md_capital_in_civilized_eastindies_vu = {
+    capital_scope = {
+        superregion = east_indies_superregion
+        NOT = {
+            continent = oceania
+            region = moluccas_region
+            region = celebes_region
+            region = philippines_region
+        }
+    }
+}
+
+st_md_capital_in_civilized_southasia_vu = {
+    OR = {
+        st_md_capital_in_india = yes
+        st_md_capital_in_civilized_eastindies_vu = yes
+    }
+}
+
+st_md_capital_in_uncivilized_eastindies_or_oceania_vu = {
+    capital_scope = {
+        OR = {
+            continent = oceania
+            region = moluccas_region
+            region = celebes_region
+            region = philippines_region
+        }
+    }
+}
+
+st_md_capital_in_uncivilized_eastindies_or_oceania_not_australia_vu = {
+    capital_scope = {
+        OR = {
+            continent = oceania
+            region = moluccas_region
+            region = celebes_region
+            region = philippines_region
+        }
+        NOT = {
+            region = australia_region
+        }
+    }
+}
+
+st_md_capital_in_mesoamerican_regions_vu = {
+    capital_scope = {
+        OR = {
+            region = mexico_region
+            region = central_america_region
+            region = peru_region
+            region = upper_peru_region
+            area = popayan_area
+            area = cordillera_occidental_area
+            area = coquivacoa_area
+            area = maracaibo_area
+            area = bogota_area
+            area = panama_area
+        }
+    }
+}
+
+st_md_is_white_vu = {
+    st_md_capital_in_christian_europe = yes
+}
+st_md_is_black_vu = {
+    OR = {
+        st_md_capital_in_subsaharan_africa_vu = yes
+        st_md_capital_in_australia = yes
+    }
+}
+st_md_is_brown_vu = {
+    st_md_is_white_vu = no
+    st_md_is_black_vu = no
+}
+
+
+
+
+# Trade --------------------------------------------------
+
+st_md_control_multiple_markets_vu = {
+    calc_true_if = {
+        amount = 2
+        st_md_textiles_supply_vu = yes
+        st_md_luxury_supply_vu = yes
+        st_md_flavor_supply_vu = yes
+        st_md_beverage_supply_vu = yes
+    }
+}
+
+st_md_american_supply_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = cocoa
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = tobacco
+        }
+    }
+}
+
+st_md_textiles_supply_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = agave
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = carpet
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = dyes
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = bison_hides
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = silk
+        }
+        num_of_owned_provinces_with = {
+            value = 20
+            trade_goods = cloth
+        }
+        num_of_owned_provinces_with = {
+            value = 20
+            trade_goods = wool
+        }
+        num_of_owned_provinces_with = {
+            value = 20
+            trade_goods = cotton
+        }
+        num_of_owned_provinces_with = {
+            value = 30
+            trade_goods = fur
+        }
+    }
+}
+
+st_md_luxury_supply_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = diamonds
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = ebony
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = gems
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = gold
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = silver
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = incense
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = pearls
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = ivory
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = chinaware
+        }
+    }
+}
+
+st_md_flavor_supply_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = cloves
+        }
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = nutmeg
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = cinnamon
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = saffron
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = sugar
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = spices
+        }
+        num_of_owned_provinces_with = {
+            value = 12
+            trade_goods = salt
+        }
+    }
+}
+
+st_md_beverage_supply_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = champagne
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = whiskey
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = sake
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = rum
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = coffee
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = tea
+        }
+        num_of_owned_provinces_with = {
+            value = 12
+            trade_goods = beer
+        }
+        num_of_owned_provinces_with = {
+            value = 12
+            trade_goods = wine
+        }
+        num_of_owned_provinces_with = {
+            value = 12
+            trade_goods = vodka
+        }
+    }
+}
+
+
+st_md_is_european_merchant_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = champagne
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = gunpowder
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = mercury
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = gold
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = silver
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = glass
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = amber
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = cheese
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = vodka
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = wine
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = beer
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = naval_supplies
+        }
+    }
+}
+
+st_md_is_african_merchant_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 1
+            trade_goods = diamonds
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = gold
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = palm_oil
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = slaves
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = ivory
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = elephants
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = coffee
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = incense
+        }
+    }
+}
+
+st_md_is_asian_merchant_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = sea_turtle
+        }
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = pearls
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = jade
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = gunpowder
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = saffron
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = whaling
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = elephants
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = ivory
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = ebony
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = silk
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = opium
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = cinnamon
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = spices
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = chinaware
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = cotton
+        }
+    }
+}
+
+st_md_is_steppe_merchant_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = horses
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = wool
+        }
+        num_of_owned_provinces_with = {
+            value = 10
+            trade_goods = fur
+        }
+    }
+}
+
+st_md_is_islamic_merchant_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = saffron
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = gems
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = pearls
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = opium
+        }
+        num_of_owned_provinces_with = {
+            value = 4
+            trade_goods = carpet
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = sugar
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = coffee
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = incense
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = silk
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = spices
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = camel
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = cotton
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = olive_oil
+        }
+        num_of_owned_provinces_with = {
+            value = 7
+            trade_goods = dates
+        }
+    }
+}
+
+st_md_is_native_merchant_vu = {
+    OR = {
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = gold
+        }
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = gems
+        }
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = pearls
+        }
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = alpaca_wool
+        }
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = sulfur
+        }
+        num_of_owned_provinces_with = {
+            value = 2
+            trade_goods = cloves
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = spices
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = cinnamon
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = cocoa
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = maize
+        }
+        num_of_owned_provinces_with = {
+            value = 3
+            trade_goods = potato
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = tobacco
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = cotton
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = bison_hides
+        }
+        num_of_owned_provinces_with = {
+            value = 5
+            trade_goods = fur
+        }
+    }
+}

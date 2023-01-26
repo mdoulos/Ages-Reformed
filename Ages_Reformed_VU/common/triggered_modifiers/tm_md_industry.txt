@@ -1,0 +1,8 @@
+tm_md_industry = {
+	potential = { current_age = age_of_change }
+	trigger = {
+		st_md_has_50_manufactories = yes
+	}
+	production_efficiency = 0.1
+	global_trade_power = 0.1
+}

@@ -1,0 +1,7 @@
+tm_md_africa = {
+	potential = { current_age = industrial_age }
+	trigger = {
+		st_md_has_20_in_africa = yes
+	}
+	global_missionary_strength = 0.01
+}

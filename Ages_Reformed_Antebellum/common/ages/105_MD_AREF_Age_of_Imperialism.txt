@@ -1,0 +1,280 @@
+age_of_imperialism = {
+	start = 1800
+	
+	can_start = {
+		is_institution_enabled = industrialization
+	}
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		seat_in_parliament = -3
+		war_exhaustion = -1
+	}
+	
+	
+	objectives = {
+		obj_md_world_metropolis = {
+			st_md_capital_is_metropolis = yes
+		}
+		obj_md_worldtrade = {
+			st_md_capital_node_is_highest_trade_node = yes
+		}
+		obj_md_industry_antebellum = {
+			st_md_has_50_manufactories = yes
+		}
+		obj_md_metals = {
+			st_md_has_metal_bonus = yes
+		}
+		obj_md_army = {
+			army_size = 200
+		}
+		obj_md_tearwalls = {
+			custom_trigger_tooltip = {
+				tooltip = AB_DESTROY_WALLS
+				has_country_flag = destroyed_city_walls
+			}
+		}
+		obj_md_africa_antebellum = {
+			st_md_has_10_in_africa = yes
+		}
+		obj_md_five_continents = {
+			num_of_continents = 5
+		}
+	}
+
+	abilities = {
+		ab_md_1800s_rail_movement = {
+			modifier = {
+				movement_speed = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = movement_speed flagCategory = movement_speed }
+			}
+		}
+		ab_md_1800s_imperial_ambition = {
+			modifier = {
+				global_colonial_growth = 25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = colonization flagName = colonist_and_colonial_growth abilityName = ab_md_1800s_imperial_ambition showTooltip = true }
+			}
+		}
+		ab_md_1800s_scientific_academies = {
+			modifier = {
+				global_institution_spread = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = science flagName = institution_spread abilityName = ab_md_1800s_scientific_academies showTooltip = true }
+			}
+		}
+		ab_md_1800s_army_academy = {
+			modifier = {
+				free_leader_pool = 2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = free_leader_pool flagCategory = free_leader_pool }
+			}
+		}
+		ab_md_1800s_support_artillery = {
+			modifier = {
+				artillery_fire = 1
+			}
+			ai_will_do = {
+				factor = 500
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = artillery_fire flagCategory = artillery_damage }
+			}
+		}
+		ab_md_1800s_business_tycoons = {
+			modifier = {
+				merchants = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = trade flagName = merchant abilityName = ab_md_1800s_business_tycoons showTooltip = true }
+			}
+		}
+		ab_md_1800s_urbanization = {
+			modifier = {
+				build_cost = -0.25
+				build_time = -0.25
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = economy flagName = build_cost_and_time abilityName = ab_md_1800s_urbanization showTooltip = true }
+			}
+		}
+		ab_md_1800s_minority_rights = {
+			modifier = {
+				global_unrest = -1
+				num_accepted_cultures = 2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = global_unrest_cultures flagCategory = accepted_cultures }
+			}
+		}
+		ab_md_1800s_conscription = {
+			modifier = {
+				global_manpower_modifier = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = global_manpower_modifier flagCategory = improved_manpower }
+			}
+		}
+		ab_md_1800s_force_march = {
+			modifier = {
+				force_march_free = yes
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = has_had_force_march flagCategory = force_march }
+			}
+		}
+		ab_md_1800s_no_distance_for_core = {
+			modifier = {
+				ignore_coring_distance = yes
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = has_had_conquest flagCategory = ignore_coring_distance }
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					# AI peace code relies on being limited by coring range, or it will create crazy border gore where it can't reach its new lands
+					factor = 0
+					OR = {
+						is_subject = no
+						overlord = {
+							ai = yes
+						}
+					}
+				}
+			}
+		}
+		ab_md_1800s_quick_landings = {
+			modifier = {
+				movement_speed_onto_off_boat_modifier = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = movement_speed_onto_off_boat_modifier flagCategory = amphibious_assault }
+			}
+		}
+		ab_md_1800s_military_atrocities = {
+			modifier = {
+				harsh_treatment_cost = -0.5
+				global_rebel_suppression_efficiency = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = docile flagName = harsh_treatment_cost_rebel_suppression abilityName = ab_md_1800s_military_atrocities showTooltip = true }
+			}
+		}
+		ab_md_1800s_scurvy_cured = {
+			modifier = {
+				transport_attrition = -0.5
+				naval_attrition = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = naval_and_transport_attrition flagCategory = naval_attrition }
+			}
+		}
+		ab_md_1800s_promote_monarchy = {
+			modifier = {
+				prestige = 0.5
+				flagship_cost = -0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = monarchy flagName = promote_monarchy abilityName = ab_md_1800s_promote_monarchy showTooltip = true }
+			}
+		}
+		ab_md_1800s_international_missions = {
+			modifier = {
+				missionaries = 1
+				global_heathen_missionary_strength = 0.03
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = religion flagName = missionary_and_missionary_strength_vs_heathens abilityName = ab_md_1800s_international_missions showTooltip = true }
+			}
+		}
+		ab_md_1800s_spy_great_game = {
+			modifier = {
+				spy_offence = 0.25
+				rebel_support_efficiency = 0.25
+			}
+			effect = {
+				se_md_add_or_upgrade_bonus = { bonusName = espionage flagName = spy_offence_rebel_support abilityName = ab_md_1800s_spy_great_game showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_md_1800s_growing_bureaucracy = {
+			modifier = {
+				free_adm_policy = 1
+				free_dip_policy = 1
+				free_mil_policy = 1
+				possible_policy = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				se_md_refund_splendor = { flagName = free_policies flagCategory = policies }
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+tm_md_control_holy_site = {
+	potential = {
+		current_age = age_of_feudalism
+	}
+	trigger = {
+		OR = {
+			st_md_control_holy_site_europe = yes
+			st_md_control_holy_site_africa = yes
+			st_md_control_holy_site_middle_east = yes
+			st_md_control_holy_site_east_asia = yes
+			st_md_control_holy_site_south_asia = yes
+			st_md_control_holy_site_tartary = yes
+			st_md_control_holy_site_americas = yes
+		}
+	}
+	diplomatic_reputation = 1
+}

@@ -1,0 +1,12 @@
+tm_md_placate_the_estates = {
+	potential = {
+		current_age = age_of_feudalism
+	}
+	trigger = {
+		OR = {
+			st_md_placated_estates = yes
+			st_md_placated_estates_england = yes
+		}	
+	}
+	global_unrest = -2
+}

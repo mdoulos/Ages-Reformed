@@ -1,0 +1,7 @@
+tm_md_army = {
+	potential = { current_age = age_of_imperialism }
+	trigger = {
+		army_size = 200
+	}
+	global_unrest = -2
+}

@@ -1,0 +1,27 @@
+tags={
+	"Balance"
+	"Historical"
+	"Gameplay"
+	"Expansion"
+}
+version="1.0"
+name="Ages Reformed"
+picture="thumbnail.png"
+dependencies={
+	"Pope Leo's Nightmare"
+	"Albert (AIM)"
+	"Albert (AIM) [1.34]"
+	"Ante Bellum"
+	"Anbennar"
+	"Anbennar-PublicFork"
+	"Anbennar-Haless"
+	"Anbennar: A Fantasy Total Conversion"
+	"Ages and Splendor Expanded"
+	"Anbennar Unleashed - Ages and Splendor Expanded"
+	"[1.34.2]1356 - A Timeline Extension Mod"
+	"[1.34.5]1356 - A Timeline Extension Mod"
+	"Victorum Universalis"
+	"Victorum-Universalis 1.34"
+}
+supported_version="1.34.*.*"
+remote_file_id="2896451151"

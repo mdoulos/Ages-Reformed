@@ -1,0 +1,7 @@
+tm_md_worldtrade = {
+	potential = { current_age = industrial_age }
+	trigger = {
+		st_md_capital_node_is_highest_trade_node = yes
+	}
+	diplomatic_reputation = 1
+}

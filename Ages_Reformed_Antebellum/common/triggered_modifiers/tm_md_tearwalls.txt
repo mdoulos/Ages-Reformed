@@ -1,0 +1,7 @@
+tm_md_tearwalls = {
+	potential = { current_age = age_of_imperialism }
+	trigger = {
+		has_country_flag = destroyed_city_walls
+	}
+	all_estate_loyalty_equilibrium = 0.1
+}

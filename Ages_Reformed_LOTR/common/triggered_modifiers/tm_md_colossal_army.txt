@@ -1,0 +1,13 @@
+tm_md_colossal_army = {
+	potential = {
+		OR = {
+			current_age = third_age
+			current_age = fourth_age
+		}
+	}
+	trigger = {
+		land_forcelimit = 100
+		army_size_percentage = 0.9
+	}
+	country_military_power = 1
+}

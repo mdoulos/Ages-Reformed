@@ -1,0 +1,9 @@
+tm_md_feudal_society = {
+	potential = {
+		current_age = age_of_feudalism
+	}
+	trigger = {
+		num_of_subjects = 4
+	}
+	free_leader_pool = 1
+}
